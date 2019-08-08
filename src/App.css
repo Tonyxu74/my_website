@@ -83,6 +83,24 @@
   background-color: #00AAE6
 }
 
+@media only screen and (max-height: 600px) {
+  .Blurb {
+    margin-bottom: 4px;
+  }
+  .Name {
+    margin-top: 0px;
+  }
+  .App-header {
+    width: 55vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App-header {
+    width: 85vw;
+  }
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
