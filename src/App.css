@@ -1,0 +1,104 @@
+.App {
+  text-align: left;
+}
+
+.App-header {
+  position: absolute;
+  left: 10vw;
+  height: 80vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 10s;
+}
+
+.ship-container {
+  position: absolute;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.Name {
+  height: calc(5px + 2vmin);
+  color: white;
+  font-size: calc(30px + 3vw);
+  margin-bottom: calc(25px + 4vw);
+}
+
+.Name span{
+  color: #00AAE6;
+  font-weight: 350;
+}
+
+.Blurb {
+  color: white;
+  font-size: calc(10px + 1vw);
+  margin-top: 0px;
+  margin-bottom: calc(9px + 1vw);
+}
+.svg {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 40%;
+  height: 60vw;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 10s;
+}
+
+.ButtonBox {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.Button {
+  padding: 10px 20px; 
+  width: 100%;
+  background-color: #FE4A49;
+  color: white;
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: calc(7px + 1vw);
+  font-weight: 300;
+  font-family: 'Varela', sans-serif;
+  clip-path: polygon(100% 0, 100% 26%, 100% 100%, 0 100%, 0 0);
+}
+.Button:hover {
+  clip-path: polygon(100% 0, 100% 26%, 82% 100%, 0 100%, 0 0);
+  transition: 0.5s;
+}
+
+.Button_back {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #00AAE6
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
