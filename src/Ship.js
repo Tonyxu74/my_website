@@ -92,21 +92,40 @@ function Particle({ geometry, material }) {
       ref.current.position.y < -350 ? zFactor: (ref.current.position.z > 0) ? ref.current.position.z + noise_speed : ref.current.position.z - noise_speed
     )
   })
-  return <mesh ref={ref} material={material} geometry={geometry} position={[xFactor, yInit, zFactor]} />
+  return <mesh ref={ref} material={material} geometry={geometry} position={[xFactor, yInit, zFactor]} color={"white"}/>
+}
+
+function randomGeo(){
+  const list = [
+    new THREE.BoxBufferGeometry(),
+    new THREE.IcosahedronBufferGeometry(), 
+    new THREE.PlaneBufferGeometry(),
+    new THREE.BoxBufferGeometry(),
+    new THREE.DodecahedronBufferGeometry(),
+    new THREE.RingBufferGeometry(),
+    new THREE.TetrahedronBufferGeometry(),
+    new THREE.TorusBufferGeometry(),
+    new THREE.TorusKnotBufferGeometry(),
+    new THREE.OctahedronBufferGeometry(),
+    new THREE.ConeBufferGeometry(),
+    new THREE.CircleBufferGeometry(),
+    new THREE.CylinderBufferGeometry
+  ];
+  return list[Math.floor(Math.random()*13)]
 }
 
 function Swarm() {
   const light = useRef()
-  const [geometryRef, geometry] = useResource()
+  //const [geometryRef, geometry] = useResource()
   const [materialRef, material] = useResource()
+  const Geo = randomGeo();
   return (
     <>
-      <pointLight ref={light} distance={100} intensity={1.5} color="indianred" />
-      <directionalLight intensity={0.6} position={[0, 10, 40]} penumbra={1} color="yellow"/>
-      <directionalLight intensity={0.6} position={[30, 0, -20]} penumbra={1} color="red"/>
-      <octahedronBufferGeometry ref={geometryRef} args={[0.8, 0]} />
+      <pointLight ref={light} distance={100} intensity={2} color="yellow" />
+      <directionalLight intensity={0.8} position={[0, 10, 40]} penumbra={1} color="turquoise"/>
+      <directionalLight intensity={0.8} position={[30, 0, -20]} penumbra={1} color="red"/>
       <meshPhysicalMaterial ref={materialRef} />
-      {geometry && new Array(300).fill().map((_, index) => <Particle key={index} material={material} geometry={geometry} />)}
+      {new Array(300).fill().map((_, index) => <Particle key={index} material={material} geometry={Geo} />)}
     </>
   )
 }
@@ -122,7 +141,7 @@ function Stars() {
   const [geo, mat, coords] = useMemo(() => {
     const geo = new THREE.SphereBufferGeometry(1, 10, 10)
     const mat = new THREE.MeshBasicMaterial({ color: "yellow" })
-    const coords = new Array(500).fill().map(i => [Math.random() * 800 - 400, Math.random() * 700 - 350, Math.random() * 800 - 400])
+    const coords = new Array(500).fill().map(i => [Math.random() * 500 - 250, Math.random() * 700 - 350, Math.random() * 500 - 250])
     return [geo, mat, coords]
   }, [])
   return (
