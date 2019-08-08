@@ -117,7 +117,7 @@ function Stars() {
   useRender(() => {
     // Some things maybe shouldn't be declarative, we're in the render-loop here with full access to the instance
     // const r = 5 * Math.sin(THREE.Math.degToRad((theta += 0.01)))
-    group.current.rotation.set(0, 0.0003 + group.current.rotation.y, 0)
+    group.current.rotation.set(0, 0.0005 + group.current.rotation.y, 0)
   })
   const [geo, mat, coords] = useMemo(() => {
     const geo = new THREE.SphereBufferGeometry(1, 10, 10)
@@ -153,7 +153,7 @@ export default function Ship() {
   return (
     <>
     <div className="main">
-      <Canvas camera={{ fov: 75, position: [0, -100, 200], rotation:[0,0,1] }}>
+      <Canvas camera={{ fov: 75, position: [0, -45, 80], rotation:[0,0,1] }}>
         <Stars />
         <Swarm />
         <Effect />

@@ -27,6 +27,13 @@ div.header-major {
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .main {
+    width: 250%;
+    left: -150%;
+  }
+}
+
 @-webkit-keyframes fadeInRight {
   from {
     opacity: 0;
