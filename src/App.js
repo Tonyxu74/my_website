@@ -1,16 +1,14 @@
-import React from 'react';
-import './App.css';
-import Line from "./Lines.js";
-import Ship from "./Ship.js";
+import React from 'react'
+import Home from "./scenes/Home.js"
+import Experiences from "./scenes/Experiences.js"
+import { BrowserRouter as Router, Route, HashRouter } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <div className="ship-container">
-        <Ship/>
-      </div>
-      <Line />
-    </div>
+    <Router>
+      <Route exact path="/experiences/" component={Experiences} />
+      <Route exact path="/" component={Home} />
+    </Router>
   );
 }
 

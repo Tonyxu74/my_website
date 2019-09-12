@@ -1,5 +1,90 @@
 .App {
   text-align: left;
+  height: 100%;
+  width: 100%;
+}
+
+.home_main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  overflow: hidden;
+}
+
+.home_space {
+  position: absolute;  
+  width: 100%;
+  height: 100%;
+}
+
+.experiences_main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
+
+.experiences_body {
+  color: white;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.experiences_title {
+  font-size: calc(40px + 2vw);
+  color: #FFFFFF;
+  margin-bottom: 5vw;
+}
+
+.experiences_header {
+  position: absolute;
+  left: 0px;
+  width: 90%;
+  top: 0px;
+  padding: calc(30px + 2vw);
+  color: white;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experiences_navbar {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 100%;
+  border-top: 2px solid #FE4A49;
+}
+
+.experiences_navbar_item {
+  text-decoration: none;
+  color: #FE4A49;
+  font-size: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.experiences_navbar_item span {
+  color: white;
+}
+
+.experiences_navbar_item:hover{
+  cursor: pointer;
+  background-color: #444444;
 }
 
 .App-header {
@@ -14,13 +99,6 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   animation-duration: 10s;
-}
-
-.ship-container {
-  position: absolute;
-  color: black;
-  height: 100%;
-  width: 100%;
 }
 
 .Name {
@@ -80,7 +158,124 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: #00AAE6
+  background-color: #00AAE6;
+}
+
+.header-major {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+
+.PostBox {
+  display: grid;
+  grid-template-areas: 
+    'title body'
+    'header body'
+    'image body' 
+    'empty body'
+    'empty topbutton';
+
+  grid-template-columns: 40% auto;
+  grid-template-rows: auto auto 45% auto 20px;
+  grid-gap: 20px;
+  grid-column-gap: 100px;
+  margin-bottom: 200px;
+  border-bottom: 1px solid #00AAE6;
+}
+
+.PostTitle {
+  grid-area: title;
+  font-size: calc(25px + 2vw);
+  margin-bottom: 0px;
+}
+
+.PostHeader {
+  grid-area: header;
+  font-size: calc(15px + 1vw);
+  margin-top: 0px;
+  color: #00AAE6;
+}
+
+.PostBody {
+  grid-area: body;
+  line-height: calc(25px + 1vw);
+  font-size: calc(10px + 0.75vw);
+}
+
+.PostImage {
+  grid-area: image;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.PostTopButton {
+  grid-area: topbutton;
+  text-align: right;
+  text-decoration: none;
+  color: #DE2A29;
+  font-size: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  outline: none;
+  font-weight: 550;
+  opacity: 0.6;
+  background-color: #222222;
+}
+
+.PostTopButton:hover{
+  cursor: pointer;
+  color: #FE4A49;
+  opacity: 1;
+}
+
+.Image {
+  max-height: 200px;
+ 
+}
+@media only screen and (max-width: 1200px) {
+  .PostBox {
+    grid-template-areas:
+    'title'
+    'header'
+    'image'
+    'body';
+    grid-template-columns: 85vw;
+    grid-template-rows: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home_space {
+    width: 220%;
+    left: -120%;
+  }
+  .App-header {
+    width: 85vw;
+  }
+  .experiences_header {
+    padding: 15px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
+  .home_space {
+    width: 250%;
+    left: -150%;
+  }
 }
 
 @media only screen and (max-height: 600px) {
@@ -92,12 +287,6 @@
   }
   .App-header {
     width: 55vw;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .App-header {
-    width: 85vw;
   }
 }
 
