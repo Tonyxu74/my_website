@@ -87,6 +87,11 @@
   background-color: #444444;
 }
 
+.ExperiencesLink {
+  text-decoration: none;
+  color: #FE4A49;
+}
+
 .App-header {
   position: absolute;
   left: 10vw;
@@ -180,15 +185,14 @@
   grid-template-areas: 
     'title body'
     'header body'
-    'image body' 
-    'empty body'
-    'empty topbutton';
+    'image body'
+    'empty body';
 
-  grid-template-columns: 40% auto;
-  grid-template-rows: auto auto 45% auto 20px;
-  grid-gap: 20px;
+  grid-template-columns: 45% auto;
+  grid-template-rows: auto auto 300px auto;
+  grid-row-gap: 20px;
   grid-column-gap: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   border-bottom: 1px solid #00AAE6;
 }
 
@@ -214,8 +218,10 @@
 .PostImage {
   grid-area: image;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
+  height: 80%;
 }
 
 .PostTopButton {
@@ -242,19 +248,31 @@
 }
 
 .Image {
-  max-height: 200px;
- 
+  height: calc(200px + 3vw);
+  max-width: 100%;
 }
+
 @media only screen and (max-width: 1200px) {
   .PostBox {
-    grid-template-areas:
-    'title'
-    'header'
-    'image'
-    'body';
-    grid-template-columns: 85vw;
+    display: grid;
+    grid-template-areas: 
+      'title'
+      'header'
+      'image'
+      'body';
+  
+    grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 100px;
+    margin-bottom: 200px;
+    border-bottom: 1px solid #00AAE6;
   }
+
+  .Image {
+    height: 150px;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
