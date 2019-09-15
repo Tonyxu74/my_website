@@ -189,11 +189,11 @@
     'empty body';
 
   grid-template-columns: 45% auto;
-  grid-template-rows: auto auto 300px auto;
+  grid-template-rows: auto auto 40% auto;
   grid-row-gap: 20px;
   grid-column-gap: 100px;
   margin-bottom: 100px;
-  border-bottom: 1px solid #00AAE6;
+  /* border-bottom: 1px solid #00AAE6; */
 }
 
 .PostTitle {
@@ -221,7 +221,8 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 80%;
+  height: 100%;
+  align-items: center;
 }
 
 .PostTopButton {
@@ -248,8 +249,10 @@
 }
 
 .Image {
-  height: calc(200px + 3vw);
-  max-width: 100%;
+  /* height: calc(200px + 3vw); */
+  max-height: 100%;
+  padding: 10px;
+  /* max-width: 100%; */
 }
 
 @media only screen and (max-width: 1200px) {
@@ -262,15 +265,18 @@
       'body';
   
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto 200px auto;
     grid-row-gap: 20px;
-    grid-column-gap: 100px;
-    margin-bottom: 200px;
-    border-bottom: 1px solid #00AAE6;
+    margin-bottom: 100px;
   }
 
-  .Image {
-    height: 150px;
+  .Image{
+    max-width: 100%;
+  }
+  
+  .experiences_header {
+    padding-left: 10%;
+    width: 75%
   }
 
 }
@@ -285,6 +291,7 @@
   }
   .experiences_header {
     padding: 15px;
+    width: 95%;
   }
 
 }

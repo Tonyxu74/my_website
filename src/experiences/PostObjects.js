@@ -3,7 +3,7 @@ export const Sunnybrook = {
     'summary': 'Sunnybrook',
     'title': 'Sunnybrook Research Institute',
     'header': 'summer student researching cancer detection in whole-slide digital images',
-    'image_urls': [`${process.env.PUBLIC_URL}/SunnybrookImage.jpg`, `${process.env.PUBLIC_URL}/SunnybrookOutput.jpg` ],
+    'image_urls': [`${process.env.PUBLIC_URL}/SunnybrookImage.jpg`, ],
     'body': [
         'As a largely new experience for me (first Co-op and first look into research), my summer at Sunnybrook was a time of significant learning. I gained intuition on machine learning, and learned a bit about myself, my personal preferences, and my career aspirations. I worked in Anne Martel’s lab on digital pathology and cancer detection in humongous whole-slide images-we’re talking 60,000 x 100,000 pixels, which are an order of magnitude larger in every dimension than the Hubble Deep Field (a big space picture, take a look <a target="_blank" href="https://svs.gsfc.nasa.gov/30946" class="ExperiencesLink">here</a>).',
         'The majority of my summer’s work was summarized at the Sunnybrook poster presentation competition, which was about showcasing the summer students’ research projects (you can find my poster <a target="_blank" class="ExperiencesLink" href=' + `${process.env.PUBLIC_URL}/SunnybrookResearchPoster.pdf` + '>here</a>). I looked at the way resolution and patch size affected final outputs.', 
