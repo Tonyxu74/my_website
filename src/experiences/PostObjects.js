@@ -1,3 +1,15 @@
+export const SmartStop = {
+    'summary': 'SmartStop',
+    'title': 'SmartStop',
+    'header': 'a project improving 3 or 4 way intersections for the city of Vancouver\'s Decode Congestion hackathon',
+    'image_urls': [`${process.env.PUBLIC_URL}/smartstop.jpg`, `${process.env.PUBLIC_URL}/smartstop_img.png`, `${process.env.PUBLIC_URL}/smartstop_mask.png`],
+    'body': [
+        'Decode Congestion is a 48-hour hackathon set up by the City of Vancouver as a way to engage the community in finding solutions to alleviate its traffic problems using “smart city” techniques like road allocation, and data-oriented solutions. ',
+        'My team’s solution to this hackathon was SmartStop, a very cheap computer vision-based recognition software that controls 3 or 4 way stop intersections in a more intuitive way. SmartStop used a Raspberry Pi with a camera module that controls a blinking red LED light. While there are no cars, the LED blinks continuously. It detects when a car arrives at the intersection, and stops blinking the light given that it is safe to cross. Simply, blinking means STOP, not blinking means GO. SmartStop is meant to reduce some of the ambiguity that can arise at 4-way intersections, especially when multiple cars come up at once. However, importantly, it does NOT change the rules of the road. Whoever arrives at the stop sign first is allowed to pass first, and pedestrians are given the right of way.',
+        'My role in this project was getting the computer vision software working. Over the 48 (very long) hours, I coded up and trained a PyTorch segmentation network to recognize the silhouettes of cars, and sped up training and detection with parallel processing and CUDA. We used the Berkeley DeepDrive car bounding box dataset, and you can see some of our segmentations to the left. The Raspberry Pi took images, sent them with SCP to my laptop, which consolidated information, and told the Pi whether it was safe to cross the street or not. ',
+        'From SmartStop, I learned a lot about speeding up machine learning algorithms for real-time detection, and how we can apply machine learning to improve city flow. Going on, I am interested in improving the segmentation algorithm, and improving model sizes by borrowing from YOLO, to move the computation fully onto the Pi. '
+    ]
+}
 
 export const Sunnybrook = {
     'summary': 'Sunnybrook',
@@ -37,10 +49,11 @@ export const Tsinghua = {
 export const DogGAN = {
     'summary': 'Doggin\' Dog GAN',
     'title': 'Doggin\' Dog GAN',
-    'header': 'a full-stack project involving a GAN and encoder wrapped in a web application',
+    'header': 'a full-stack project making cute but mostly creepy dogs',
     'image_urls': [`${process.env.PUBLIC_URL}/Dog1.png`, `${process.env.PUBLIC_URL}/Dog2.png` ],
     'body': [
         'Armed with newfound knowledge and confidence halfway through the summer, a friend and I tackled a fun and exciting project involving our favorite animal (sorry cat lovers). Using the annotations on the Stanford Dogs dataset, we preprocessed the images and augmented using randomCrop and rotations. With this, and various GAN improving strategies, such as using soft labels and adding noise, we ended up with some reasonable dog features. Then, using an encoder to pack images into a noise vector, we created a method to “gannify” a real dog. This was all packaged in an AWS-based Docker app, and you can try it out or read more <a href="https://dogs.rockzhou.com" target="_blank" class="ExperiencesLink">here</a>.',
         'This project was a short but sweet way to apply the knowledge I gained about deep learning over the summer, and learn more about full-stack web development.'
     ]
 }
+

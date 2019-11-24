@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import SpaceScene from '../components/SpaceScene.js'
 import "../App.css"
-import {Sunnybrook, MINT, Tsinghua, DogGAN} from '../experiences/PostObjects.js'
+import {SmartStop, Sunnybrook, MINT, Tsinghua, DogGAN} from '../experiences/PostObjects.js'
 import ExperiencesPost from '../components/ExperiencesPost.js'
 
 function Experiences(){
@@ -28,6 +28,12 @@ function Experiences(){
                      <a href='/' className="experiences_navbar_item">
                         <p>
                             <span>Home</span>
+                        </p>
+                    </a>
+
+                    <a href={`#${SmartStop['summary']}`} className="experiences_navbar_item">
+                        <p>
+                            {SmartStop['summary']}
                         </p>
                     </a>
 
@@ -58,6 +64,7 @@ function Experiences(){
                 </div>
             
                 <div className="experiences_body">
+                    <ExperiencesPost post_object={SmartStop} />
                     <ExperiencesPost post_object={Sunnybrook} />
                     <ExperiencesPost post_object={MINT} />
                     <ExperiencesPost post_object={DogGAN} /> 
