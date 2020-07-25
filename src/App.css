@@ -29,6 +29,9 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   animation-duration: 3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .experiences_body {
@@ -51,9 +54,9 @@
 }
 
 .experiences_header {
-  position: absolute;
+  position: relative;
   left: 0px;
-  width: 90%;
+  width: 60%;
   top: 0px;
   padding: calc(30px + 2vw);
   color: white;
@@ -133,12 +136,14 @@
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   animation-duration: 10s;
+  pointer-events: none;
 }
 
 .ButtonBox {
   display: grid;
   grid-gap: 15px;
   grid-template-columns: 1fr 1fr 1fr;
+  pointer-events: auto;
 }
 
 .Button {
@@ -176,11 +181,12 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  pointer-events: none;
 }
 
 
 
-.PostBox {
+/* .PostBox {
   display: grid;
   grid-template-areas: 
     'title body'
@@ -193,7 +199,19 @@
   grid-row-gap: 20px;
   grid-column-gap: 100px;
   margin-bottom: 100px;
-  /* border-bottom: 1px solid #00AAE6; */
+}*/
+.PostBox {
+  display: grid;
+  grid-template-areas: 
+    'title'
+    'header'
+    'image'
+    'body';
+
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto 300px auto;
+  grid-row-gap: 20px;
+  margin-bottom: 100px;
 }
 
 .PostTitle {
@@ -256,20 +274,7 @@
 }
 
 @media only screen and (max-width: 1200px) {
-  .PostBox {
-    display: grid;
-    grid-template-areas: 
-      'title'
-      'header'
-      'image'
-      'body';
   
-    grid-template-columns: auto;
-    grid-template-rows: auto auto 200px auto;
-    grid-row-gap: 20px;
-    margin-bottom: 100px;
-  }
-
   .Image{
     max-width: 100%;
   }
@@ -291,7 +296,7 @@
   }
   .experiences_header {
     padding: 15px;
-    width: 95%;
+    width: 85%;
   }
 
 }

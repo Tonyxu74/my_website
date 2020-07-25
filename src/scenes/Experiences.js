@@ -13,7 +13,7 @@ function Experiences(){
         <div className="experiences_main">
             
             <div style={{position: "fixed", height: '100%', width: '100%', pointerEvents: 'none'}}>
-                <SpaceScene cam_pos={[30, 0, 400]} cam_rot={[0,0,0]} />
+                <SpaceScene cam_pos={[30, 0, 400]} cam_rot={[0,0,0]}/>
             </div>
     
             <div className="experiences_header" id={'home'}>

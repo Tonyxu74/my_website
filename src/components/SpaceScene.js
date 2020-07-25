@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useMemo } from 'react'
+import React, { useEffect, useRef, useMemo, useCallback } from 'react'
 import { apply, Canvas, useRender, useResource, useThree } from 'react-three-fiber'
 import * as resources from './resources/index.js'
 import * as THREE from 'three/src/Three'
+// import { useFrame } from 'react-three-fibe   r/types/src/hooks';
 
 apply(resources)
 
@@ -157,14 +158,24 @@ return (
 )
 }
 
+function MoveCam({mouse}) {
+    
+    useRender(({ camera }) => camera.updateProjectionMatrix(void (camera.rotation.x = -mouse.current[0]/1000, camera.rotation.y = mouse.current[1]/1000)))
+    
+    return null
+}
+
 function SpaceScene({cam_pos, cam_rot}){
-    return (
-        <Canvas camera={{ fov: 75, position: cam_pos, rotation:cam_rot }}>
+    const mouse = useRef([0, 0])
+    const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
+    return (  
+        <Canvas camera={{ fov: 75, position: cam_pos, rotation: cam_rot}} onMouseMove={onMouseMove}>
             <Stars />
             <Swarm />
             <Effect />
             <RocketShip />
-      </Canvas>
+            <MoveCam mouse={mouse} />
+        </Canvas>
     )
 }
 
