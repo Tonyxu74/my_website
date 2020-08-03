@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useMemo, useCallback } from 'react'
-import { apply, Canvas, useRender, useResource, useThree } from 'react-three-fiber'
+import { Canvas, extend, useFrame, useResource, useThree } from 'react-three-fiber'
 import * as resources from './resources/index.js'
 import * as THREE from 'three/src/Three'
-// import { useFrame } from 'react-three-fibe   r/types/src/hooks';
+// import { useFrame } from 'react-three-fiber/types/src/hooks';
 
-apply(resources)
+extend(resources)
 
 function shipmaker(){
 var geo = new THREE.Geometry();
@@ -60,7 +60,7 @@ return geo
 function RocketShip() {
 let rof = useRef()
 var geo = shipmaker();
-useRender(() => {
+useFrame(() => {
     rof.current.rotation.set(0, 0.005 + rof.current.rotation.y, 0)
     rof.current.scale.set(5, 5, 5)
     rof.current.position.set(0, 0, -10)
@@ -81,7 +81,7 @@ let yFactor = Math.random()/2 + 0.1
 let zFactor = Math.random() * 15 - 7.5
 let noise_speed = Math.random()/30
 let yInit = Math.random()*160 - 160
-useRender(() => {
+useFrame(() => {
     ref.current.scale.set(randscale, randscale, randscale)
     t += speed
     const s = Math.cos(t)
@@ -126,9 +126,13 @@ return (
 
 function Stars() {
 let group = useRef()
-let theta = 0
-useRender(() => {
-    group.current.rotation.set(0, 0.0005 + group.current.rotation.y, 0)
+useFrame(() => {
+    // group.current.rotation.set(0, 0.0005 + group.current.rotation.y, 0)
+    group.current.children.forEach(function (sphere) {
+
+        sphere.position.set(sphere.position.x, sphere.position.y < -250 ? 250 : sphere.position.y - 0.1, sphere.position.z)
+
+    })
 })
 const [geo, mat, coords] = useMemo(() => {
     const geo = new THREE.SphereBufferGeometry(1, 10, 10)
@@ -149,7 +153,7 @@ function Effect() {
 const composer = useRef()
 const { scene, gl, size, camera } = useThree()
 useEffect(() => void composer.current.setSize(size.width, size.height), [size])
-useRender(({ gl }) => void ((gl.autoClear = true), composer.current.render()), true)
+useFrame(({ gl }) => void ((gl.autoClear = true), composer.current.render()), true)
 return (
     <effectComposer ref={composer} args={[gl]}>
     <renderPass attachArray="passes" scene={scene} camera={camera} />
@@ -160,7 +164,7 @@ return (
 
 function MoveCam({mouse}) {
     
-    useRender(({ camera }) => camera.updateProjectionMatrix(void (camera.rotation.x = -mouse.current[0]/1000, camera.rotation.y = mouse.current[1]/1000)))
+    useFrame(({ camera }) => camera.updateProjectionMatrix(void (camera.rotation.x = -mouse.current[0]/1000, camera.rotation.y = mouse.current[1]/1000, camera.rotation.z=1)))
     
     return null
 }
