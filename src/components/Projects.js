@@ -9,19 +9,28 @@ function Project({symbol, name, description, link}){
     )
 }
 
+function ProjectNolink({symbol, name, description}){
+    return(
+        <div className="project_box">
+            <h2><span>{symbol}</span>{name}</h2>
+            <p className="project_description">{description}</p>
+        </div>
+    )
+}
+
 function Projects(){
     return(
         <div className="projects_main" id="Projects">
             <div className="projects_text">
                 <h1>Stuff I've done</h1>
 
-                <Project symbol="🃏" name="Slay the Spire Neural Card Recommender" 
+                <ProjectNolink symbol="🃏" name="Slay the Spire Neural Card Recommender" 
                 description="Slay the Spire is a roguelike deckbuilder game where you ascend through spire floors while battling enemies with a deck you build along the way. 
                 I created a recommender system based on cosine similarity between two embedding vectors. 
                 One embedding vector encodes a card choice, and the second encodes your general gamestate (takes into account deck and relics). 
                 Overall, the model recommends you card choices given their cosine similarity to your current gamestate. 
                 Still a work in progress, keep an eye out for the link!" 
-                link="https://github.com/Tonyxu74"/>
+                />
             
                 <Project symbol="🔬" name="Overcoming the limitations of patch-based learning to detect cancer in whole slide images" 
                 description="The culmination of the work I did in my summer at the Sunnybrook Research Institute in Toronto. 
@@ -47,11 +56,11 @@ function Projects(){
                 I built a data aquisition and preprocessing pipeline, and a simple classification model for EEG data that determines a person's motion intent." 
                 link="https://ubcmint.github.io/"/>
 
-                <Project symbol="🌏" name="Exchange at Nanyang Technological University" 
+                <ProjectNolink symbol="🌏" name="Exchange at Nanyang Technological University" 
                 description="I went on exhange at NTU in Singapore. 
                 It was fascinating to experience the multitude of different cultures in and around Singapore, and meeting new people was fun too. 
                 And yes, the food is in fact as good as they say." 
-                link=""/>
+                />
 
                 <Project symbol="🌌" name="VLBI Image Reconstruction" 
                 description="I was inspired by the imaging of the black hole M87 to apply machine learning to reconstruct images from incomplete UV-plane data. 
