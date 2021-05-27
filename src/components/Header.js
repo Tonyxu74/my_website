@@ -18,7 +18,7 @@ function Header(){
             </p>
           </header>
 
-          <img className="Image" src={`${process.env.PUBLIC_URL}/SunnybrookImage.jpg`}/>
+          <img className="Image" src={`${process.env.PUBLIC_URL}/pic.jpg`}/>
 
         </div>
     )

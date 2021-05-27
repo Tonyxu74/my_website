@@ -175,7 +175,8 @@ return (
 
 function MoveCam({mouse}) {
     
-    useFrame(({ camera }) => camera.updateProjectionMatrix(void (camera.rotation.x = -mouse.current[0]/1000, camera.rotation.y = mouse.current[1]/1000, camera.rotation.z=1)))
+    // add a bit of momentum to the camera, weighted like: rot = a * current_rot + (1-a) * wanted_rot
+    useFrame(({ camera }) => camera.updateProjectionMatrix(void (camera.rotation.x = 0.9*camera.rotation.x - 0.1*mouse.current[0]/700, camera.rotation.y = 0.8*camera.rotation.y + 0.2*mouse.current[1]/700, camera.rotation.z=1)))
     
     return null
 }

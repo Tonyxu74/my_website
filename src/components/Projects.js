@@ -47,6 +47,12 @@ function Projects(){
                 I built a data aquisition and preprocessing pipeline, and a simple classification model for EEG data that determines a person's motion intent." 
                 link="https://ubcmint.github.io/"/>
 
+                <Project symbol="🌏" name="Exchange at Nanyang Technological University" 
+                description="I went on exhange at NTU in Singapore. 
+                It was fascinating to experience the multitude of different cultures in and around Singapore, and meeting new people was fun too. 
+                And yes, the food is in fact as good as they say." 
+                link=""/>
+
                 <Project symbol="🌌" name="VLBI Image Reconstruction" 
                 description="I was inspired by the imaging of the black hole M87 to apply machine learning to reconstruct images from incomplete UV-plane data. 
                 The further away an object is, the larger the apeture needed to see it. 
