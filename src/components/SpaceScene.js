@@ -71,28 +71,20 @@ return (
 
 }
 
-function Particle({ geometry, material }) {
+function Particle({ geometry, material, xInit, yInit, zInit, scale, rot_speed, trans_speed}) {
 let ref = useRef()
-let randscale = Math.random() + 1.5 
-let t = 0
-let speed = 0.01 + Math.random() / 200
-let xFactor = Math.random() * 15 - 7.5 
-let yFactor = Math.random()/2 + 0.1
-let zFactor = Math.random() * 15 - 7.5
-let noise_speed = Math.random()/30
-let yInit = Math.random()*160 - 160
+let ySpeed = 0.2
+
 useFrame(() => {
-    ref.current.scale.set(randscale, randscale, randscale)
-    t += speed
-    const s = Math.cos(t)
-    ref.current.rotation.set(s * 5, s * 5, s * 5)
+    ref.current.scale.set(scale, scale, scale)
+    ref.current.rotation.set(ref.current.rotation.x + rot_speed, ref.current.rotation.y + rot_speed, ref.current.rotation.z + rot_speed)
     ref.current.position.set(
-    ref.current.position.y < -160 ? xFactor: (ref.current.position.x > 0) ? ref.current.position.x + noise_speed : ref.current.position.x - noise_speed, 
-    ref.current.position.y < -160 ? -5: ref.current.position.y -yFactor,
-    ref.current.position.y < -160 ? zFactor: (ref.current.position.z > 0) ? ref.current.position.z + noise_speed : ref.current.position.z - noise_speed
+    ref.current.position.y < -160 ? xInit: (ref.current.position.x > 0) ? ref.current.position.x + trans_speed : ref.current.position.x - trans_speed, 
+    ref.current.position.y < -160 ? -5: ref.current.position.y - ySpeed,
+    ref.current.position.y < -160 ? zInit: (ref.current.position.z > 0) ? ref.current.position.z + trans_speed : ref.current.position.z - trans_speed
     )
 })
-return <mesh ref={ref} material={material} geometry={geometry} position={[xFactor, yInit, zFactor]} color={"white"}/>
+return <mesh ref={ref} material={material} geometry={geometry} position={[xInit, yInit, zInit]} color={"white"}/>
 }
 
 function randomGeo(){
@@ -112,14 +104,33 @@ return list[Math.floor(Math.random()*8)]
 function Swarm() {
 const light = useRef()
 const [materialRef, material] = useResource()
+
+// randomly initialize swarm parameters to avoid parameter refresh on scroll
 const Geo = randomGeo();
+const x_inits = Array.from({length: 70}, () => Math.random() * 15 - 7.5);
+const y_inits = Array.from({length: 70}, () => Math.random()* 160 - 160);
+const z_inits = Array.from({length: 70}, () => Math.random() * 15 - 7.5);
+const scale_inits = Array.from({length: 70}, () => Math.random() + 1.5);
+const rot_speed_inits = Array.from({length: 70}, () => Math.random() / 20);
+const trans_speed_inits = Array.from({length: 70}, () => Math.random() / 15);
+
 return (
     <>
     <pointLight ref={light} distance={100} intensity={2} color="yellow" />
     <directionalLight intensity={0.8} position={[0, 10, 40]} penumbra={1} color="turquoise"/>
     <directionalLight intensity={0.8} position={[30, 0, -20]} penumbra={1} color="red"/>
     <meshPhysicalMaterial ref={materialRef} />
-    {new Array(40).fill().map((_, index) => <Particle key={index} material={material} geometry={Geo} />)}
+    {new Array(70).fill().map((_, index) => <Particle 
+        key={index} 
+        material={material} 
+        geometry={Geo} 
+        xInit={x_inits[index]} 
+        yInit={y_inits[index]} 
+        zInit={z_inits[index]} 
+        scale={scale_inits[index]}
+        rot_speed={rot_speed_inits[index]}
+        trans_speed={trans_speed_inits[index]}
+    />)}
     </>
 ) 
 }
@@ -172,14 +183,16 @@ function MoveCam({mouse}) {
 function SpaceScene({cam_pos, cam_rot}){
     const mouse = useRef([0, 0])
     const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
-    return (  
-        <Canvas camera={{ fov: 75, position: cam_pos, rotation: cam_rot}} onMouseMove={onMouseMove}>
-            <Stars />
-            <Swarm />
-            <Effect />
-            <RocketShip />
-            <MoveCam mouse={mouse} />
-        </Canvas>
+    return (
+        <div className="home_space" id="Home">
+            <Canvas camera={{ fov: 75, position: cam_pos, rotation: cam_rot}} onMouseMove={onMouseMove}>
+                <Stars />
+                <Swarm />
+                <Effect />
+                <RocketShip />
+                <MoveCam mouse={mouse} />
+            </Canvas>
+        </div>
     )
 }
 
