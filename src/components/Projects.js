@@ -12,7 +12,7 @@ function Project({symbol, name, description, link}){
 function ProjectNolink({symbol, name, description}){
     return(
         <div className="project_box">
-            <h2><span>{symbol}</span>{name}</h2>
+            <h2 className="project_title"><span>{symbol}</span>{name}</h2>
             <p className="project_description">{description}</p>
         </div>
     )

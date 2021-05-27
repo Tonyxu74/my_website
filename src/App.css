@@ -186,12 +186,17 @@
 .project_link {
   text-decoration: none;
   color: white;
-  
 }
 .project_link:hover { 
   color: #00AAE6;
 }
 .project_link span {
+  font-size: calc(15px + 2vw)
+}
+.project_title {
+  color: white;
+}
+.project_title span {
   font-size: calc(15px + 2vw)
 }
 .project_description {
