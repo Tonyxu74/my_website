@@ -3,7 +3,7 @@ import React from 'react'
 function Project({symbol, name, description, link}){
     return(
         <div className="project_box">
-            <h2><a href={link} className="project_link" rel="noopener noreferrer"><span>{symbol}</span>{name}</a></h2>
+            <h2><a href={link} className="project_link" target="_blank" rel="noopener noreferrer"><span>{symbol}</span>{name}</a></h2>
             <p className="project_description">{description}</p>
         </div>
     )
@@ -28,7 +28,7 @@ function Projects(){
                 description="Slay the Spire is a roguelike deckbuilder game where you ascend through spire floors while battling enemies with a deck you build along the way. 
                 I created a recommender system based on cosine similarity between two embedding vectors. 
                 One embedding vector encodes a card choice, and the second encodes your general gamestate (takes into account deck and relics). 
-                Overall, the model recommends you card choices given their cosine similarity to your current gamestate. 
+                The model essentially uses the distance between these vectors to recommend card choices as you progress through the game. 
                 Still a work in progress, keep an eye out for the link!" 
                 />
             
@@ -37,6 +37,13 @@ function Projects(){
                 This publication details a way to improve the detection of the extent of breast cancer in a whole-slide histopathology image (the tumor bed). 
                 My work was primarily on creating a patch-level classifier, which achieved 3rd on the BreastPathQ cellularity competition at the time." 
                 link="https://www.nature.com/articles/s41598-021-88494-z"/>
+
+                <Project symbol="💥" name="Baryon Acoustic Oscillations and CHIME"
+                description="A poster I created for an introductory cosmology course I took for my physics minor. 
+                In the early stages of the universe's development, protons, photons, and electrons were tightly coupled in a primordial fluid. 
+                This fluid underwent acoustic oscillations (equivalent of a sound wave in the fluid), that left imprints on the distribution of matter on huge scales.
+                Investigations on this length scale can lead to better constraints on the evolution of the universe, and my poster uses simulated hydrogen density data to demonstrate this."
+                link={`${process.env.PUBLIC_URL}/BAOsAndChime.pdf`}/>
 
                 <Project symbol="🧠" name="Neureka 2020 - EEG Seizure Detection" 
                 description="Neureka was an international challenge hosted by Novela Neurotech and NeuroTechX on seizure prediction using EEG voltage data. 
