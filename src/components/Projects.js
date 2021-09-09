@@ -24,12 +24,18 @@ function Projects(){
             <div className="projects_text">
                 <h1>Stuff I've done</h1>
 
+                <ProjectNolink symbol="🌴" name="Amazon" 
+                description="I spent a summer as an SDE Intern at Amazon, where I worked with a number of talented individuals on the eCommerce Financial Integrations (eCFI) team on financial data aggregation and tracking.
+                I helped design and build an operational dashboard website to consolidate and securely manage the workflows my team tracked.
+                Apart from learning about a variety of AWS services, I had my first experience with writing, documenting, and reviewing code to be used for an industry-level application."
+                />
+
                 <ProjectNolink symbol="🃏" name="Slay the Spire Neural Card Recommender" 
                 description="Slay the Spire is a roguelike deckbuilder game where you ascend through spire floors while battling enemies with a deck you build along the way. 
-                I created a recommender system based on cosine similarity between two embedding vectors. 
+                I created a recommender system using a transformer-based encoder model to generate a pair of embedding vectors. 
                 One embedding vector encodes a card choice, and the second encodes your general gamestate (takes into account deck and relics). 
                 The model essentially uses the distance between these vectors to recommend card choices as you progress through the game. 
-                Still a work in progress, keep an eye out for the link!" 
+                Still a work in progress, keep an eye out for the link soon!" 
                 />
             
                 <Project symbol="🔬" name="Overcoming the limitations of patch-based learning to detect cancer in whole slide images" 
