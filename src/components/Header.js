@@ -9,12 +9,12 @@ function Header(){
             </h1>
 
             <p className="Blurb">
-              Hello! I'm a 4th year Electrical Engineering student specializing in Biomed currently studying at UBC. I'm interested in applying 
+              Hello! I'm a recent UBC graduate with a degree in Electrical Engineering specializing in Biomedical Engineering. I'm interested in applying 
               deep learning to a variety of areas including medical imaging and image reconstruction. 
-              Also taking a minor in Physics and avid space enthusiast!
+              Also took a minor in Physics and avid space enthusiast!
             </p>
             <p className="Blurb">
-              I like to play badminton, go to the gym, play piano, explore the food scene, and make cool things in my free time.
+              I like to play badminton, go to the gym, play piano, explore the food scene, and make cool things in my free time. Thanks for visiting my website!
             </p>
           </header>
 

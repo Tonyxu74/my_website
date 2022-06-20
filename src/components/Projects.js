@@ -24,6 +24,12 @@ function Projects(){
             <div className="projects_text">
                 <h1>Stuff I've done</h1>
 
+                <Project symbol="🔬" name="Self supervised contrastive learning for digital histopathology" 
+                description="Another research project in collaboration with the team at Sunnybrook Research Institute! 
+                This publication explores the application of a new wave of self-supervised machine learning algorithms (like SimCLR) to a variety of histopathology datasets and tasks.
+                These types of methods can help alleviate the need to obtain data labelled by medical professionals, which are both scarce and time-consuming to create."
+                link="https://www.sciencedirect.com/science/article/pii/S2666827021000992"/>
+
                 <ProjectNolink symbol="🌴" name="Amazon" 
                 description="I spent a summer as an SDE Intern at Amazon, where I worked with a number of talented individuals on the eCommerce Financial Integrations (eCFI) team on financial data aggregation and tracking.
                 I helped design and build an operational dashboard website to consolidate and securely manage the workflows my team tracked.
