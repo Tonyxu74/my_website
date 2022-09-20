@@ -24,6 +24,31 @@ function Projects(){
             <div className="projects_text">
                 <h1>Stuff I've done</h1>
 
+                <Project symbol="🐚" name="Samsung Research America - Think Tank Team" 
+                description="I worked for a summer as a computational scientist intern with a fantastic team situated in Mountain View, California. 
+                With TTT, I ideated, experimented, and created technologies to push the frontier of existing Samsung products, and sometimes invent new ones! 
+                I probably learned something new every day I spent on the team, whether it be technical (like SLaM) or otherwise (like surfing)."
+                link="https://thinktankteam.info/"/>
+
+                <Project symbol="❄" name="Machine Learning Approaches to Accelerate Cryo-EM" 
+                description="My capstone project for my Major in Electrical Engineering in collaboration with Gandeeva Therapeutics! 
+                Cryo-EM is a new technology capable of creating detailed 3D maps of proteins with high precision. 
+                Using traditional and deep-learning computer vision techniques, I helped create a pipeline to automate the imaging process of the cryo-EM microscope."
+                link="https://www.gandeeva.com/"/>
+
+                <ProjectNolink symbol="🔬" name="Multi-Resolution Vision Transformer for Subtype Classification in Ovarian Cancer Whole-Slide Histopathology Images" 
+                description="My thesis for my Major in Electrical Engineering in collaboration with the AIM Lab at UBC! 
+                Whole-slide images contain a wealth of data, but their immense size (~100,000 x 100,000 pixels) makes them difficult to process. 
+                Usually, computer vision algorithms will comb through the image patch-by-patch (~224 x 224 pixels), but combining information from each patch in the slide is nontrivial. 
+                I developed a method to extract, and combine information from patches at multiple resolutions using the new Vision Transformer model."
+                />
+
+                <Project symbol="🔭" name="Variable Source Detection in the CHIME Telescope" 
+                description="The thesis I completed for my Minor in Physics in collaboration with CHIME! 
+                The CHIME Telescope monitors a huge swath of the sky every single day, giving it the unique ability to track random transient events. 
+                I first cleaned and reduced the size of the ringmap data, and then developed an automated algorithm to detect legitimate sources varying over a few days."
+                link="https://chime-experiment.ca/en"/>
+
                 <Project symbol="🔬" name="Self supervised contrastive learning for digital histopathology" 
                 description="Another research project in collaboration with the team at Sunnybrook Research Institute! 
                 This publication explores the application of a new wave of self-supervised machine learning algorithms (like SimCLR) to a variety of histopathology datasets and tasks.
