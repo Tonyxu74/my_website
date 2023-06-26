@@ -9,7 +9,7 @@ function Header(){
             </h1>
 
             <p className="Blurb">
-              Hello! I'm a first-year PhD candidate at the Department of Medical Biophysics at UofT. 
+              Hello! I'm a first-year PhD candidate at the Department of Medical Biophysics at UofT supervised by Dr. Anne Martel and Dr. Maged Goubran. 
               I recently graduated from UBC with a major in Electrical Engineering specializing in Biomedical Engineering and a minor in Physics. 
               I'm interested in applying deep learning to a variety of areas including medical imaging and image reconstruction. 
               I enjoy learning new things, and am also an avid space enthusiast!

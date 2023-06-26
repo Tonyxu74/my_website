@@ -24,6 +24,21 @@ function Projects(){
             <div className="projects_text">
                 <h1>Stuff I've done</h1>
 
+                <Project symbol="; " name="SemiCOL Challenge" 
+                description="SemiCOL is a computational challenge using self-supervised learning approaches to tackle colorectal cancer detection.
+                The pipeline we developed for the challenge used label-efficient methods to pretrain feature extractors (PAWS and DINO), that were later applied to a tissue segmentation task.
+                We used both convolution-based (UNet) and Transformer-based (UNETR) segmentation models. 
+                The algorithm ended up obtaining second place in both arms of the challenge, and I presented the algorithm during the 19th European Congress on Digital Pathology (EDCP 2023)!"
+                link="https://semicol.org/"/>
+
+                <Project symbol="🧲" name="DDPM for MRI Denoising" 
+                description="A project I made for an AI course during my PhD.
+                Diffusion models are typically used as generative models that recover high-quality images from random noise in an iterative manner.
+                However, if you give them an image halfway through this iterative process, they can also be used for denoising!
+                I applied this idea and extended the original DDPM model into 3D to denoise MR images.
+                I was motivated to do this project because I was very interested in learning more about DDPMs and how they work at a deeper level."
+                link="https://github.com/Tonyxu74/ddpm-mri"/>
+
                 <Project symbol="🐚" name="Samsung Research America - Think Tank Team" 
                 description="I worked for a summer as a computational scientist intern with a fantastic team situated in Mountain View, California. 
                 With TTT, I ideated, experimented, and created technologies to push the frontier of existing Samsung products, and sometimes invent new ones! 
