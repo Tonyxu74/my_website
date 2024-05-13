@@ -1,5 +1,6 @@
 import Header from '../components/Header.js'
 import SpaceScene from '../components/SpaceScene.js'
+import Publications from '../components/Publications.js'
 import Projects from '../components/Projects.js'
 import '../App.css'
 import React from 'react'
@@ -8,6 +9,10 @@ export default function Home() {
 
   function handleHeaderClick() {
     document.getElementById('MainHeader').scrollIntoView({ behavior: 'smooth' })
+  }
+
+  function handlePublicationsClick() {
+    document.getElementById('Publications').scrollIntoView({ behavior: 'smooth' })
   }
 
   function handleProjectsClick() {
@@ -34,6 +39,9 @@ export default function Home() {
           <a onClick={handleHeaderClick} className="Button">about</a>
         </li>
         <li className="listitem">
+          <a onClick={handlePublicationsClick} className="Button">publications</a>
+        </li>
+        <li className="listitem">
           <a onClick={handleProjectsClick} className="Button">experiences</a>
         </li>
         <li className="listitem">
@@ -48,6 +56,8 @@ export default function Home() {
       </ul>
       
       <Header />
+
+      <Publications />
 
       <Projects />
 

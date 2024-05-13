@@ -51,12 +51,12 @@ function Projects(){
                 Using traditional and deep-learning computer vision techniques, I helped create a pipeline to automate the imaging process of the cryo-EM microscope."
                 link="https://www.gandeeva.com/"/>
 
-                <ProjectNolink symbol="🔬" name="Multi-Resolution Vision Transformer for Subtype Classification in Ovarian Cancer Whole-Slide Histopathology Images" 
+                <Project symbol="🔬" name="Multi-Resolution Vision Transformer for Subtype Classification in Ovarian Cancer Whole-Slide Histopathology Images" 
                 description="My thesis for my Major in Electrical Engineering in collaboration with the AIM Lab at UBC! 
                 Whole-slide images contain a wealth of data, but their immense size (~100,000 x 100,000 pixels) makes them difficult to process. 
                 Usually, computer vision algorithms will comb through the image patch-by-patch (~224 x 224 pixels), but combining information from each patch in the slide is nontrivial. 
                 I developed a method to extract, and combine information from patches at multiple resolutions using the new Vision Transformer model."
-                />
+                link="https://open.library.ubc.ca/soa/cIRcle/collections/undergraduateresearch/52966/items/1.0413043"/>
 
                 <Project symbol="🔭" name="Variable Source Detection in the CHIME Telescope" 
                 description="The thesis I completed for my Minor in Physics in collaboration with CHIME! 
@@ -64,11 +64,12 @@ function Projects(){
                 I first cleaned and reduced the size of the ringmap data, and then developed an automated algorithm to detect legitimate sources varying over a few days."
                 link="https://chime-experiment.ca/en"/>
 
-                <Project symbol="🔬" name="Self supervised contrastive learning for digital histopathology" 
-                description="Another research project in collaboration with the team at Sunnybrook Research Institute! 
-                This publication explores the application of a new wave of self-supervised machine learning algorithms (like SimCLR) to a variety of histopathology datasets and tasks.
-                These types of methods can help alleviate the need to obtain data labelled by medical professionals, which are both scarce and time-consuming to create."
-                link="https://www.sciencedirect.com/science/article/pii/S2666827021000992"/>
+                <ProjectNolink symbol="🔬" name="Undergraduate Research Student at Sunnybrook Research Institute" 
+                description="I spent a summer (and some more time remotely) researching with the Sunnybrook Research Institute in Toronto! 
+                I worked on two projects during this time. 
+                The first one describes a way to improve the detection of the extent of breast cancer in whole-slide histopathology images. 
+                The second explores the application of a new wave of self-supervised machine learning algorithms (like SimCLR) to a variety of histopathology datasets and tasks."
+                />
 
                 <ProjectNolink symbol="🌴" name="Amazon" 
                 description="I spent a summer as an SDE Intern at Amazon, where I worked with a number of talented individuals on the eCommerce Financial Integrations (eCFI) team on financial data aggregation and tracking.
@@ -83,12 +84,6 @@ function Projects(){
                 The model essentially uses the distance between these vectors to recommend card choices as you progress through the game. 
                 Still a work in progress, keep an eye out for the link soon!" 
                 />
-            
-                <Project symbol="🔬" name="Overcoming the limitations of patch-based learning to detect cancer in whole slide images" 
-                description="The culmination of the work I did in my summer at the Sunnybrook Research Institute in Toronto. 
-                This publication details a way to improve the detection of the extent of breast cancer in a whole-slide histopathology image (the tumor bed). 
-                My work was primarily on creating a patch-level classifier, which achieved 3rd on the BreastPathQ cellularity competition at the time." 
-                link="https://www.nature.com/articles/s41598-021-88494-z"/>
 
                 <Project symbol="💥" name="Baryon Acoustic Oscillations and CHIME"
                 description="A poster I created for an introductory cosmology course I took for my physics minor. 
