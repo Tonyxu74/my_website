@@ -36,10 +36,17 @@ function Publications(){
             <div className="projects_text">
                 <h1>Publications</h1>
 
+                <Publication name="Detecting noisy labels with repeated cross-validations" 
+                authors={["Jianan Chen*", "Vishwesh Ramanathan*", "Tony Xu", "Anne Martel"]}
+                tony_ind={2}
+                link="https://papers.miccai.org/miccai-2024/paper/0372_paper.pdf"
+                details="Medical Image Computing and Computer Assisted Intervention, 2024"
+                />
+
                 <Publication name="Interpretable Assessment of Lymph Nodes in Specimens Post-Neoadjuvant Systemic Therapy Using AI" 
                 authors={["Dina Bassiouny", "Tony Xu", "Chetan Srinidhi", "Michael Sze Wai Lam", "Sharon Nofech-Mozes", "Anne Martel"]}
                 tony_ind={1}
-                link="https://uscap.org/uscap-annual-meeting/"
+                link="https://laboratoryinvestigation.org/article/S0023-6837(24)01273-X/fulltext"
                 details="United States and Canadian Academy of Pathology Annual Meeting, 2024"
                 />
 
@@ -48,6 +55,13 @@ function Publications(){
                 tony_ind={0}
                 link="https://link.springer.com/chapter/10.1007/978-3-031-44917-8_11"
                 details="MICCAI Workshop in Medical Image Learning with Limited and Noisy Data, 2023"
+                />
+
+                <Publication name="Resource and data efficient self supervised learning" 
+                authors={["Ozan Ciga*", "Tony Xu*", "Anne L. Martel"]}
+                tony_ind={1}
+                link="https://arxiv.org/abs/2109.01721"
+                details="arXiv preprint, 2021"
                 />
 
                 <Publication name="Self supervised contrastive learning for digital histopathology" 

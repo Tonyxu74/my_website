@@ -24,6 +24,12 @@ function Projects(){
             <div className="projects_text">
                 <h1>Stuff I've done</h1>
 
+                <Project symbol="🧠" name="SELMA3D Challenge" 
+                description="SELMA3D is a challenge on using self-supervised learning to improve the segmentation of structures inside 3D light-sheet microscopy images. 
+                We developed a novel self-supervised method and segmentation pipeline to tackle the challenge, more details on this coming soon!
+                Our method ended up obtaining third place on the challenge, and we presented our work at a Medical Image Computing and Computer Assisted Intervention (MICCAI) 2024 workshop."
+                link="https://selma3d.grand-challenge.org/"/>
+
                 <Project symbol="; " name="SemiCOL Challenge" 
                 description="SemiCOL is a computational challenge using self-supervised learning approaches to tackle colorectal cancer detection.
                 The pipeline we developed for the challenge used label-efficient methods to pretrain feature extractors (PAWS and DINO), that were later applied to a tissue segmentation task.

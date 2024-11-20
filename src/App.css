@@ -102,6 +102,11 @@
   margin-bottom: calc(9px + 1vw);
 }
 
+.blurbs_link {
+  color: #00AAE6;
+  text-decoration: none;
+}
+
 .Image {
   height: 25vw;
   width: 25vw;

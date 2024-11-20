@@ -9,13 +9,14 @@ function Header(){
             </h1>
 
             <p className="Blurb">
-              Hello! I'm a second-year PhD student at the Department of Medical Biophysics at UofT supervised by Dr. Anne Martel and Dr. Maged Goubran. 
-              I recently graduated from UBC with a major in Electrical Engineering specializing in Biomedical Engineering and a minor in Physics. 
-              I'm working on applying deep learning to a variety of areas including huge medical images and image reconstruction. 
-              I enjoy learning new things, and am also an avid space enthusiast!
+              Hello! I'm a third-year PhD candidate at the Department of Medical Biophysics at the University of Toronto supervised by Dr. Anne Martel and Dr. Maged Goubran. 
+              My research focuses on improving self-supervised methods applied to huge medical images to reduce the reliance of deep learning methods on expert-generated annotations.
+              I'm also broadly interested in using deep learning in healthcare to accelerate and enhance medical workflows.
+              I'm honored to have recently received the <a href="https://research.google/programs-and-events/phd-fellowship/" className="blurbs_link" target="_blank" rel="noopener noreferrer">Google PhD Fellowship in health and bioscience</a>.
             </p>
             <p className="Blurb">
-              I like to play badminton, go to the gym, play piano, explore the food scene, and make cool things in my free time. 
+              Before my PhD, I completed my undergraduate studies at UBC with a major in Electrical Engineering specializing in Biomedical Engineering and a minor in Physics. 
+              I'm an avid space enthusiast, enjoy learning and building new things, playing badminton, and going to the gym in my free time.
               Thanks for visiting my website!
             </p>
           </header>
