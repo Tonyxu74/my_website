@@ -1,6 +1,6 @@
 import Header from '../components/Header.js'
 import SpaceScene from '../components/SpaceScene.js'
-import Publications from '../components/Publications.js'
+// import Publications from '../components/Publications.js'
 import Projects from '../components/Projects.js'
 import '../App.css'
 import React from 'react'
@@ -11,9 +11,9 @@ export default function Home() {
     document.getElementById('MainHeader').scrollIntoView({ behavior: 'smooth' })
   }
 
-  function handlePublicationsClick() {
-    document.getElementById('Publications').scrollIntoView({ behavior: 'smooth' })
-  }
+  // function handlePublicationsClick() {
+  //   document.getElementById('Publications').scrollIntoView({ behavior: 'smooth' })
+  // }
 
   function handleProjectsClick() {
     document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' })
@@ -39,7 +39,7 @@ export default function Home() {
           <a onClick={handleHeaderClick} className="Button">about</a>
         </li>
         <li className="listitem">
-          <a onClick={handlePublicationsClick} className="Button">publications</a>
+          <a href="https://scholar.google.ca/citations?user=3vwB4oEAAAAJ&hl=en" className="Button" target="_blank" rel="noopener noreferrer">publications</a>
         </li>
         <li className="listitem">
           <a onClick={handleProjectsClick} className="Button">experiences</a>
@@ -56,8 +56,6 @@ export default function Home() {
       </ul>
       
       <Header />
-
-      <Publications />
 
       <Projects />
 

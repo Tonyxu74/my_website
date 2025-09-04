@@ -9,7 +9,7 @@ function Header(){
             </h1>
 
             <p className="Blurb">
-              Hello! I'm a third-year PhD candidate at the Department of Medical Biophysics at the University of Toronto supervised by Dr. Anne Martel and Dr. Maged Goubran. 
+              Hello! I'm a fourth-year PhD candidate at the Department of Medical Biophysics at the University of Toronto supervised by Dr. Anne Martel and Dr. Maged Goubran. 
               My research focuses on improving self-supervised methods applied to huge medical images to reduce the reliance of deep learning methods on expert-generated annotations.
               I'm also broadly interested in using deep learning in healthcare to accelerate and enhance medical workflows.
               I'm honored to have recently received the <a href="https://research.google/programs-and-events/phd-fellowship/" className="blurbs_link" target="_blank" rel="noopener noreferrer">Google PhD Fellowship in health and bioscience</a>.
