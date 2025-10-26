@@ -45,7 +45,7 @@ export default function Home() {
           <a onClick={handleProjectsClick} className="Button">experiences</a>
         </li>
         <li className="listitem">
-          <a href={`${process.env.PUBLIC_URL}/TonyXuWebsiteResume.pdf`} className="Button" target="_blank" rel="noopener noreferrer">resume</a>
+          <a href={`${process.env.PUBLIC_URL}/TonyXuWebsiteCV.pdf`} className="Button" target="_blank" rel="noopener noreferrer">cv</a>
         </li>
         <li className="listitem">
           <a href="https://www.github.com/Tonyxu74" className="Button" target="_blank" rel="noopener noreferrer">github</a>
