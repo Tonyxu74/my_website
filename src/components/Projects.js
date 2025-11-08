@@ -20,7 +20,7 @@ function Projects(){
                     <p className="project_description">
                         I attended MICCAI 2025 in Daejeon, Korea to present my first-place solutions to the <a href="https://selma3d2025.grand-challenge.org/" target="_blank" rel="noopener noreferrer" className="blurbs_link">SELMA3D 2025 Challenge</a> and <a href="https://openreview.net/forum?id=5Zp3iXRBYc" target="_blank" rel="noopener noreferrer" className="blurbs_link">FLARE 2025 Challenge Task 4</a>.
                         The first challenge is a new rendition of last year's challenge (below), and this year I improved on our solution by adding our pretrained model to the nnUNet pipeline, using parameter efficient fine-tuning (LoRA), and improving generalizability by pseudo-labelling unlabelled data.
-                        The second challenge looks to test pretraining methods for 3D MRI and CT images; my solution used parameter efficient fine-tuning on top of <a href="https://arxiv.org/abs/2501.11755" target="_blank" rel="noopener noreferrer" className="blurbs_link">3DINO</a> to improve performance on 10 different downstream tasks simultaneously.
+                        The second challenge looks to test pretraining methods for 3D MRI and CT images; my solution used parameter efficient fine-tuning on top of <a href="https://doi.org/10.1038/s41746-025-02035-w" target="_blank" rel="noopener noreferrer" className="blurbs_link">3DINO</a> to improve performance on 10 different downstream tasks simultaneously.
                     </p>
                 </div>
 
@@ -28,7 +28,7 @@ function Projects(){
                     <h2><a href="https://selma3d.grand-challenge.org/" className="project_link" target="_blank" rel="noopener noreferrer"><span>🧠</span>SELMA3D Challenge</a></h2>
                     <p className="project_description">
                         SELMA3D is a challenge on using self-supervised learning to improve the segmentation of structures inside 3D light-sheet microscopy images. 
-                        We developed a novel self-supervised method and segmentation pipeline and applied it to the challenge (<a href="https://arxiv.org/abs/2501.11755" target="_blank" rel="noopener noreferrer" className="blurbs_link">3DINO</a>)!
+                        We developed a novel self-supervised method and segmentation pipeline and applied it to the challenge (<a href="https://doi.org/10.1038/s41746-025-02035-w" target="_blank" rel="noopener noreferrer" className="blurbs_link">3DINO</a>)!
                         Our method ended up obtaining third place on the challenge, and we presented our work at a Medical Image Computing and Computer Assisted Intervention (MICCAI) 2024 workshop.
                     </p>
                 </div>
