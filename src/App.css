@@ -163,6 +163,15 @@
   left: 0; 
 }
 
+.Instructions{
+  position: absolute;
+  text-align: center;
+  bottom: 10%;
+  right: 5%;
+  color: white;
+  font-size: calc(6px + 1vw);
+}
+
 .publications_main {
   position: relative;
   top: 0;

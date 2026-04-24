@@ -54,7 +54,11 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/tony-lt-xu/" className="Button" target="_blank" rel="noopener noreferrer">linkedin</a>
         </li>
       </ul>
-      
+
+      <div className="Instructions">
+        🖱 to move camera, ⬅ for constellations, ➡ for warp speed!
+      </div>
+
       <Header />
 
       <Projects />
