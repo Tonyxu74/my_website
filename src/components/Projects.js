@@ -7,6 +7,15 @@ function Projects(){
                 <h1>Stuff I've done</h1>
 
                 <div className="project_box">
+                    <h2><a href="https://eccv.ecva.net/virtual/2026/poster/4987" className="project_link" target="_blank" rel="noopener noreferrer"><span>🌲</span>ECCV 2026</a></h2>
+                    <p className="project_description">
+                        I attended ECCV 2026 in Malmö, Sweden to present our work developing a foundation model for 3D microscopy (µ3DINO) and a method leveraging the representations of this model to perform segmentation while handling hard regions and noisy labels (µDivSeg). 
+                        While attending, I explored the direction of the field of computer vision, ideated about new directions, chatted with like-minded individuals, and tried some local Swedish cuisine.
+                        After the conference, I made my way to Italy to hike a piece of the Alta Via 1 in the Dolomites!
+                    </p>
+                </div>
+
+                <div className="project_box">
                     <h2><a href="https://iccv.thecvf.com/virtual/2025/poster/327" className="project_link" target="_blank" rel="noopener noreferrer"><span>🌺</span>ICCV 2025</a></h2>
                     <p className="project_description">
                         I attended ICCV 2025 in Honolulu, USA to present <a href="https://www.arxiv.org/abs/2503.17564" target="_blank" rel="noopener noreferrer" className="blurbs_link">ModalTune</a>, a work I co-first authored to improve fine-tuning of slide-level foundation models in digital pathology.
